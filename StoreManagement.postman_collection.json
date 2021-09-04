@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "d5e7c640-79a8-45d3-8b0f-6b2b00eb181d",
+		"name": "StoreManagement",
+		"description": "<h6>The StoreManagement collection deals with handling both user and store actions such as user login and store creation.<h6>",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "CreateStore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0MzIxMCwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.iHxwS-zc872mxHcWWz0qEuDaAcMaF-jz2KUft5BLQG8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"827842b5-9472-4ad1-94ed-b21db8ef3f61\",\r\n  \"userId\": \"469a6272-db8a-4d15-b630-76151af813d6\",\r\n  \"storeName\": \"StoreOne\",\r\n  \"storeNumber\": \"123\",\r\n  \"storeType\": \"Kiosk\",\r\n  \"storeProducts\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Store",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Store"
+							]
+						},
+						"description": "This route handles store creation."
+					},
+					"response": []
+				},
+				{
+					"name": "GetStore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0NTIwMywiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.5E_ZBhXLJQNjd2Gdmmq7bNuAkFMlGrnh_9qs123Ksnc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Store?storeId=827842b5-9472-4ad1-94ed-b21db8ef3f61",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Store"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "827842b5-9472-4ad1-94ed-b21db8ef3f61"
+								}
+							]
+						},
+						"description": "This route handles getting the details of a store."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStoreUsingPut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0NTIwMywiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.5E_ZBhXLJQNjd2Gdmmq7bNuAkFMlGrnh_9qs123Ksnc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"storeName\": \"Kiwi\",\r\n  \"storeNumber\": \"5a3\",\r\n  \"storeType\": \"Kioosk\",\r\n  \"storeProducts\": 7500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Store?storeId=827842b5-9472-4ad1-94ed-b21db8ef3f61&userId=469a6272-db8a-4d15-b630-76151af813d6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Store"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "827842b5-9472-4ad1-94ed-b21db8ef3f61"
+								},
+								{
+									"key": "userId",
+									"value": "469a6272-db8a-4d15-b630-76151af813d6"
+								}
+							]
+						},
+						"description": "This route handles updating the details of a store using HTTP Put method."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStoreUsingPatch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0NTIwMywiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.5E_ZBhXLJQNjd2Gdmmq7bNuAkFMlGrnh_9qs123Ksnc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"storeName\": \"Kiwi\",\r\n  \"storeNumber\": \"5a3-b25\",\r\n  \"storeType\": \"Kiosk\",\r\n  \"storeProducts\": 7500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Store?storeId=827842b5-9472-4ad1-94ed-b21db8ef3f61&userId=469a6272-db8a-4d15-b630-76151af813d6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Store"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "827842b5-9472-4ad1-94ed-b21db8ef3f61"
+								},
+								{
+									"key": "userId",
+									"value": "469a6272-db8a-4d15-b630-76151af813d6"
+								}
+							]
+						},
+						"description": "This route handles updating the details of a store using HTTP Patch method."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0NTcwOCwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.mqYomHTgEfoLsbhydeMu6-W8cCW0cTxBg2xZ8mcgPXc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Store?storeId=21aa190f-af67-4222-9e0b-bd66818dcc2b",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Store"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "21aa190f-af67-4222-9e0b-bd66818dcc2b"
+								}
+							]
+						},
+						"description": "This route handles the deletion of a store."
+					},
+					"response": []
+				}
+			],
+			"description": "<h6>This folder holds routes that deal with manipulating store actions such as store creation and deletion.</h6>"
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "UserLogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImQ3NzU2NjBkLTU3YmMtNDEzYi1iMjgzLTJjNDEyYzQ2NzdiYyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InBldGVyQGVtYWlsLmNvbSIsImV4cCI6MTYzMDY4NDgzNCwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.epel6ul3lDVGn_MTP4EAu8hOe8VvWgAukiyWXmCm5N4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"peter@email.com\",\r\n    \"Password\": \"123#Abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Auth",
+								"login"
+							]
+						},
+						"description": "The UserLogin route can be used to login a user to the store management system"
+					},
+					"response": []
+				},
+				{
+					"name": "UserRegistration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fistName\": \"Peter\",\r\n  \"lastName\": \"Parker\",\r\n  \"email\": \"peter@email.com\",\r\n  \"password\": \"123#Abc\",\r\n  \"userName\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Auth/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Auth",
+								"register"
+							]
+						},
+						"description": "This route works with user registration."
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjExMTdlMzFlLTFhOTgtNDdiYi05ODM0LWM4ZWRlYzkyZWVmNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InBldGVyQGVtYWlsLmNvbSIsImV4cCI6MTYzMDY4NTU5NCwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.VmUsMQFTdCwvrUfL-EOPFcJ04uMUa-5SaLBdsAmQ-WE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/v1/User?userId=1117e31e-1a98-47bb-9834-c8edec92eef6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"User"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1117e31e-1a98-47bb-9834-c8edec92eef6"
+								}
+							]
+						},
+						"description": "This route handles getting the user details."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Petro\",\r\n  \"lastName\": \"Park\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/User",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"User"
+							]
+						},
+						"description": "This route allows for updating user details."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjFlYzc4NzQ4LWQ5NGYtNDk2Yy1iNDViLTY3ZmU4ZWM2NDhkNyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Imx1a2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbIlJlZ3VsYXIiLCJBZG1pbiJdLCJleHAiOjE2MzA2ODczOTMsImlzcyI6Imh0dHBzOi8vTWFuYWdlbWVudEFQSS5jb20iLCJhdWQiOiJodHRwczovL01hbmFnZW1lbnRXZWJBcHAuY29tIn0.bQGsz3tFkW0WGGIcO0E22TQmocSU5XLAh413yBcFKA4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/v1/User?userId=1117e31e-1a98-47bb-9834-c8edec92eef6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"User"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1117e31e-1a98-47bb-9834-c8edec92eef6"
+								}
+							]
+						},
+						"description": "This route allows the admin to delete users."
+					},
+					"response": []
+				}
+			],
+			"description": "<h6>This folder deals with both  user registration and login.</h6>"
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "GetProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0OTUyNiwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.w8psUiPudsJ4d0r96MlsddxsOWqycaeVMUNpgulJtEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Product?productId=c8e3024b-ddfa-4719-929e-5fe214cc7412",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "c8e3024b-ddfa-4719-929e-5fe214cc7412"
+								}
+							]
+						},
+						"description": "This route handles getting the details of a product."
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0OTUyNiwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.w8psUiPudsJ4d0r96MlsddxsOWqycaeVMUNpgulJtEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"storeId\": \"6a2c2946-1c61-43e5-8391-9e7eafb271a7\",\r\n  \"productName\": \"Bottle\",\r\n  \"price\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							]
+						},
+						"description": "This route handles creating a product."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProductUsingPatch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0OTUyNiwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.w8psUiPudsJ4d0r96MlsddxsOWqycaeVMUNpgulJtEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productName\": \"Bread\",\r\n  \"price\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Product?storeId=6a2c2946-1c61-43e5-8391-9e7eafb271a7&productId=c8e3024b-ddfa-4719-929e-5fe214cc7412",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "6a2c2946-1c61-43e5-8391-9e7eafb271a7"
+								},
+								{
+									"key": "productId",
+									"value": "c8e3024b-ddfa-4719-929e-5fe214cc7412"
+								}
+							]
+						},
+						"description": "This route handles updating using Patch method."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProductUsingPut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0OTUyNiwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.w8psUiPudsJ4d0r96MlsddxsOWqycaeVMUNpgulJtEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productName\": \"Tea\",\r\n  \"price\": 70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Product?storeId=6a2c2946-1c61-43e5-8391-9e7eafb271a7&productId=c8e3024b-ddfa-4719-929e-5fe214cc7412",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "6a2c2946-1c61-43e5-8391-9e7eafb271a7"
+								},
+								{
+									"key": "productId",
+									"value": "c8e3024b-ddfa-4719-929e-5fe214cc7412"
+								}
+							]
+						},
+						"description": "This route handles updating the product using Put method."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQ2OWE2MjcyLWRiOGEtNGQxNS1iNjMwLTc2MTUxYWY4MTNkNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJvc2VAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVndWxhciIsImV4cCI6MTYzMDc0OTUyNiwiaXNzIjoiaHR0cHM6Ly9NYW5hZ2VtZW50QVBJLmNvbSIsImF1ZCI6Imh0dHBzOi8vTWFuYWdlbWVudFdlYkFwcC5jb20ifQ.w8psUiPudsJ4d0r96MlsddxsOWqycaeVMUNpgulJtEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/v1/Product?productId=c8e3024b-ddfa-4719-929e-5fe214cc7412",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "c8e3024b-ddfa-4719-929e-5fe214cc7412"
+								}
+							]
+						},
+						"description": "This route handles deleting the product from the table."
+					},
+					"response": []
+				}
+			],
+			"description": "<b>This folder contains CRUD operations of product table</b>"
+		}
+	]
+}

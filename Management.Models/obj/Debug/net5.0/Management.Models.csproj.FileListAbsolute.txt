@@ -1,0 +1,12 @@
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.csproj.AssemblyReference.cache
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.AssemblyInfoInputs.cache
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.AssemblyInfo.cs
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.csproj.CoreCompileInputs.cache
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\bin\Debug\net5.0\Management.Models.deps.json
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\bin\Debug\net5.0\Management.Models.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\bin\Debug\net5.0\ref\Management.Models.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\bin\Debug\net5.0\Management.Models.pdb
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\ref\Management.Models.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.Models\obj\Debug\net5.0\Management.Models.pdb

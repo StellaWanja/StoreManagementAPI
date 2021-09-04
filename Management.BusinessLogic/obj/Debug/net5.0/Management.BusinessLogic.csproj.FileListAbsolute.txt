@@ -1,0 +1,17 @@
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.AssemblyInfo.cs
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.BusinessLogic.deps.json
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.BusinessLogic.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\ref\Management.BusinessLogic.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.BusinessLogic.pdb
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.Data.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.Models.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.Data.pdb
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\bin\Debug\net5.0\Management.Models.pdb
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.csproj.CopyComplete
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\ref\Management.BusinessLogic.dll
+C:\Users\WANJA\Desktop\PROJECTS\StoreManagementAPI\Management.BusinessLogic\obj\Debug\net5.0\Management.BusinessLogic.pdb
